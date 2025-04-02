@@ -11,26 +11,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JFrame;
-import javax.swing.JList;
-import javax.swing.*;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
+import javax.swing.JScrollPane;
 public class Gui{
     private JFrame frame;
     private JPanel panel;
-    private List<String> actions;
+    private JScrollPane scrollPane = new JScrollPane();
     // Kanske vill ha alla dessa i en lista senare.
-    private List<String> data = new ArrayList<String>();
+    private List<String> actions = new ArrayList<>();
+    private List<Button> buttons = new ArrayList<>();
     public Gui(List<String> actions){
         frame = new JFrame();
         panel = new JPanel();
+        //scrollPane.add(new JButton("Hello"));
         this.actions = actions;
         frame.setTitle("BotMaker");
+        frame.setSize(800,800);
+        this.actions = actions;
+        addPopupMenu();
+        frame.add(scrollPane);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setVisible(true);
+
 
     }
 
     public void addToList(String s){
-        data.add(s);
+        actions.add(s);
     }
 
     // Vi börjar med att skapa en drop down menu.
@@ -45,5 +54,9 @@ public class Gui{
             menuItems.add(new JMenuItem(actions.get(i)));
             popupMenu.add(menuItems.get(i));// Lägger till vårat item i popupmenyn.
         }
+        // Here our popup menu should be finished so we can create our button and add it to a list as i want to be able to remove it later when using blocks.
+        buttons.add(new Button(popupMenu));
+        frame.add(buttons.getLast());
+        System.out.println("Here");
     }
 }
