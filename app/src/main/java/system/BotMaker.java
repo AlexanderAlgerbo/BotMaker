@@ -1,4 +1,4 @@
-package app.src.main.java.system;
+package system;
 
 
 public class BotMaker {

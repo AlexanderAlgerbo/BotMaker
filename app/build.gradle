@@ -34,7 +34,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'app.src.main.java.botmaker.App'
+    mainClass = 'botmaker.App'
 }
 
 tasks.named('test') {

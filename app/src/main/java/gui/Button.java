@@ -1,4 +1,4 @@
-package app.src.main.java.gui;
+package gui;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 

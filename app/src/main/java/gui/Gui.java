@@ -1,4 +1,4 @@
-package app.src.main.java.gui;
+package gui;
 // Will contain the UI for the block code. It will be this class one runs i think.
 // So From what i have gathered i will create a ui where one can add instructions to a list. These instructions will have a pulldown bar with different instructions like press A
 // Hold A, or such. Then one can press create script. The instructions will be read and turned into an autohotkey script. Which will be compiled and turned into an exe file.

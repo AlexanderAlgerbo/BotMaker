@@ -1,12 +1,7 @@
-package app.src.main.java.gui;
-import java.util.EventListener;
-import java.util.concurrent.atomic.AtomicBoolean;
-
-import javax.swing.JButton;
-import javax.swing.JPopupMenu;
-import javax.swing.*;
+package gui;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.util.concurrent.atomic.AtomicBoolean;
 public class FocEvent extends FocusAdapter {
     AtomicBoolean s;
     public FocEvent(AtomicBoolean s){
