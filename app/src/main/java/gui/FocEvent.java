@@ -1,15 +1,18 @@
 package gui;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
-import java.util.concurrent.atomic.AtomicBoolean;
+
+import javax.swing.JPopupMenu;
 public class FocEvent extends FocusAdapter {
-    AtomicBoolean s;
-    public FocEvent(AtomicBoolean s){
+    JPopupMenu s;
+    public FocEvent(JPopupMenu s){
         this.s = s;
 
     }
     @Override
     public void focusLost(FocusEvent e){
-        s.set(false);
+        System.out.println("FocusLost");
+        s.setFocusable(false);
+        s.setVisible(false);
     }
 }
